@@ -32,14 +32,14 @@ function btn3() {
   if (digitalRead(BTN3) == 1) backlightOn = !backlightOn;
   var backlight=100;
   if(!backlightOn) backlight=0;
-  NC.backlight(Array(9).fill(backlight));
+  NC.backlight(Array(12).fill(backlight));
 }
 
 function btn2() {
   if (digitalRead(BTN2) == 1) backlightOn = !backlightOn;
   var backlight=100;
   if(!backlightOn) backlight=0;
-  NC.backlight(Array(9).fill(backlight));
+  NC.backlight(Array(12).fill(backlight));
 }
 
 btn2();
