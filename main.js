@@ -34,11 +34,17 @@ setInterval(function() {
   if(!alertOn) {
     NC.ledTop();
     NC.ledBottom();
+    NC.backlight(Array(12).fill(100));
   }
   else {
     LEDon = !LEDon;
     NC.ledTop([0,255*LEDon,255*!LEDon]);
     NC.ledBottom([0,255*!LEDon,255*LEDon]);
+    var backlight = Array(12).fill(0);
+    backlight[0]=0;
+    backlight[1]=255*!LEDon;
+    backlight[2]=255*LEDon;
+    NC.backlight(backlight);
   }
 }, 500);
 
