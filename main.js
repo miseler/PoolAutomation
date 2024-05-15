@@ -32,8 +32,8 @@ if(NC.backlight == undefined) { NC.backlight = function(a) { // 3 element array
 
 setInterval(function() {
   if(!alertOn) {
-    NC.ledTop();
-    NC.ledBottom();
+    //NC.ledTop();
+    //NC.ledBottom();
     NC.backlight(Array(12).fill(100));
   }
   else {
