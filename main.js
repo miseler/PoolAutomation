@@ -10,6 +10,7 @@ var NC = require("nodeconfeu2018");
 var LEDon = false;
 var alertOn = false;
 var backlightOn = false;
+var backlightIndex=0;
 
 const inspect = obj => {
   for (const prop in obj) {
@@ -42,7 +43,19 @@ setInterval(function() {
     //NC.ledTop([0,255*LEDon,255*!LEDon]);
     //NC.ledBottom([0,255*!LEDon,255*LEDon]);
     //var backlight = [0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon];
-    var backlight = Array(4).fill([0,0,255]).flat();
+    var backlight;
+    var backlightGrey = Array(12).fill(100);
+    var backlightWhite = Array(12).fill(255);
+    var backlightRed = [0,0,255,0,0,255,0,0,255,0,0,255];
+    var backlightGreen = [0,255,0,0,255,0,0,255,0,0,255,0];
+    var backlightBlue = [255,0,0,255,0,0,255,0,0,255,0,0];
+    switch((backlightIndex++)%5) {
+      case 0: backlight=backlightGrey;break;
+      case 1: backlight=backlightWhite;break;
+      case 2: backlight=backlightRed;break;
+      case 3: backlight=backlightGreen;break;
+      case 4: backlight=backlightBlue;break;
+    }
     /*
     backlight[0]=0;
     backlight[1]=255*!LEDon;
