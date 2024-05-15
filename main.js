@@ -44,17 +44,23 @@ setInterval(function() {
     //NC.ledBottom([0,255*!LEDon,255*LEDon]);
     //var backlight = [0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon];
     var backlight;
-    var backlightGrey = Array(12).fill(100);
+    var backlightWhiteDark = Array(12).fill(100);
     var backlightWhite = Array(12).fill(255);
+    var backlightRedDark = [0,0,100,0,0,100,0,0,100,0,0,100];
     var backlightRed = [0,0,255,0,0,255,0,0,255,0,0,255];
+    var backlightGreenDark = [0,100,0,0,100,0,0,100,0,0,100,0];
     var backlightGreen = [0,255,0,0,255,0,0,255,0,0,255,0];
-    var backlightBlue = [255,0,0,255,0,0,255,0,0,255,0,0];
-    switch((backlightIndex++)%5) {
-      case 0: backlight=backlightGrey;break;
+    var backlightBlueDark = [255,0,0,255,0,0,255,0,0,255,0,0];
+    var backlightBlue = [255,100,100,255,100,100,255,100,100,255,100,100];
+    switch((backlightIndex++)%8) {
+      case 0: backlight=backlightWhiteDark;break;
       case 1: backlight=backlightWhite;break;
-      case 2: backlight=backlightRed;break;
-      case 3: backlight=backlightGreen;break;
-      case 4: backlight=backlightBlue;break;
+      case 2: backlight=backlightRedDark;break;
+      case 3: backlight=backlightRed;break;
+      case 4: backlight=backlightGreenDark;break;
+      case 5: backlight=backlightGreen;break;
+      case 6: backlight=backlightBlueDark;break;
+      case 7: backlight=backlightBlue;break;
     }
     /*
     backlight[0]=0;
@@ -67,7 +73,7 @@ setInterval(function() {
     //NC.backlight([0,0*255*!LEDon,0*255*LEDon,0,0*255*!LEDon,0*255*LEDon,0,255*!LEDon,255*LEDon,0,0*255*!LEDon,0*255*LEDon]);
     NC.backlight(backlight);
   }
-}, 500);
+}, 800);
 
 
 function btn1() {
