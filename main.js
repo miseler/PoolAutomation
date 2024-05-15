@@ -40,7 +40,7 @@ setInterval(function() {
     LEDon = !LEDon;
     //NC.ledTop([0,255*LEDon,255*!LEDon]);
     //NC.ledBottom([0,255*!LEDon,255*LEDon]);
-    var backlight = Array([0,255*!LEDon,255*LEDon);
+    var backlight = [0,255*!LEDon,255*LEDon];
     /*
     backlight[0]=0;
     backlight[1]=255*!LEDon;
