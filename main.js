@@ -44,6 +44,9 @@ setInterval(function() {
     backlight[0]=0;
     backlight[1]=255*!LEDon;
     backlight[2]=255*LEDon;
+    backlight[6]=0;
+    backlight[7]=255*!LEDon;
+    backlight[8]=255*LEDon;
     NC.backlight(backlight);
   }
 }, 500);
