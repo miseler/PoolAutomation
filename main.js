@@ -34,7 +34,8 @@ setInterval(function() {
   if(!alertOn) {
     //NC.ledTop();
     //NC.ledBottom();
-    NC.backlight(Array(12).fill(100));
+    //NC.backlight(Array(12).fill(100));
+    NC.backlight([255,0,0,   0,255,0,   0,0,255,   0,0,0]);
   }
   else {
     LEDon = !LEDon;
