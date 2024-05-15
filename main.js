@@ -57,7 +57,7 @@ function btn3() {
 function btn2() {
   if (digitalRead(BTN2) == 1) backlightOn = !backlightOn;
   var backlight=backlightOn?100:0;
-  NC.backlight(Array(12).fill(backlight));
+  NC.backlight(Array(12).fill(0,0,200));
 }
 
 btn2();
@@ -67,3 +67,7 @@ btn1();
 setWatch(btn2, BTN2, true);
 setWatch(btn3, BTN3, true);
 setWatch(btn1, BTN1, true);
+
+exports = {
+  NC : NC
+};
