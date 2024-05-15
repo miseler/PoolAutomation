@@ -50,8 +50,8 @@ setInterval(function() {
     var backlightRed = [0,0,255,0,0,255,0,0,255,0,0,255];
     var backlightGreenDark = [0,100,0,0,100,0,0,100,0,0,100,0];
     var backlightGreen = [0,255,0,0,255,0,0,255,0,0,255,0];
-    var backlightBlueDark = [255,0,0,255,0,0,255,0,0,255,0,0];
-    var backlightBlue = [255,60,60,255,60,60,255,60,60,255,60,60];
+    var backlightBlueDark = [225,0,0,225,0,0,225,0,0,225,0,0];
+    var backlightBlue = [255,40,40,255,40,40,255,40,40,255,40,40];
     switch((backlightIndex++)%8) {
       case 0: backlight=backlightWhiteDark;break;
       case 1: backlight=backlightWhite;break;
