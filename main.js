@@ -40,13 +40,15 @@ setInterval(function() {
     LEDon = !LEDon;
     //NC.ledTop([0,255*LEDon,255*!LEDon]);
     //NC.ledBottom([0,255*!LEDon,255*LEDon]);
-    var backlight = Array(12).fill(100*LEDon);
+    var backlight = Array([0,255*!LEDon,255*LEDon);
+    /*
     backlight[0]=0;
     backlight[1]=255*!LEDon;
     backlight[2]=255*LEDon;
     backlight[6]=0;
     backlight[7]=255*!LEDon;
     backlight[8]=255*LEDon;
+    */
     NC.backlight(backlight);
   }
 }, 500);
