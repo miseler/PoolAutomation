@@ -34,14 +34,15 @@ setInterval(function() {
   if(!alertOn) {
     //NC.ledTop();
     //NC.ledBottom();
-    //NC.backlight(Array(12).fill(100));
-    NC.backlight([255,0,0,   0,255,0,   0,0,255,   0,0,0]);
+    NC.backlight(Array(12).fill(100));
+    //NC.backlight([255,0,0,   0,255,0,   0,0,255,   0,0,0]);
   }
   else {
     LEDon = !LEDon;
     //NC.ledTop([0,255*LEDon,255*!LEDon]);
     //NC.ledBottom([0,255*!LEDon,255*LEDon]);
-    var backlight = [0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon];
+    //var backlight = [0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon,0,255*!LEDon,255*LEDon];
+    var backlight = Array(4).fill([0,0,255]).flat();
     /*
     backlight[0]=0;
     backlight[1]=255*!LEDon;
@@ -50,7 +51,8 @@ setInterval(function() {
     backlight[7]=255*!LEDon;
     backlight[8]=255*LEDon;
     */
-    NC.backlight([0,0*255*!LEDon,0*255*LEDon,0,0*255*!LEDon,0*255*LEDon,0,255*!LEDon,255*LEDon,0,0*255*!LEDon,0*255*LEDon]);
+    //NC.backlight([0,0*255*!LEDon,0*255*LEDon,0,0*255*!LEDon,0*255*LEDon,0,255*!LEDon,255*LEDon,0,0*255*!LEDon,0*255*LEDon]);
+    NC.backlight(backlight);
   }
 }, 500);
 
