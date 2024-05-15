@@ -37,28 +37,26 @@ setInterval(function() {
 }, 500);
 
 
-function btn4() {
-  if (digitalRead(BTN4) == 1) alertOn = !alertOn;
+function btn1() {
+  if (digitalRead(BTN1) == 1) alertOn = !alertOn;
 }
 
 function btn3() {
   if (digitalRead(BTN3) == 1) backlightOn = !backlightOn;
-  var backlight=100;
-  if(!backlightOn) backlight=0;
+  var backlight=backlightOn?100:0;
   NC.backlight(Array(12).fill(backlight));
 }
 
 function btn2() {
   if (digitalRead(BTN2) == 1) backlightOn = !backlightOn;
-  var backlight=100;
-  if(!backlightOn) backlight=0;
+  var backlight=backlightOn?100:0;
   NC.backlight(Array(12).fill(backlight));
 }
 
 btn2();
 btn3();
-btn4();
+btn1();
 
 setWatch(btn2, BTN2, true);
 setWatch(btn3, BTN3, true);
-setWatch(btn4, BTN4, true);
+setWatch(btn1, BTN1, true);
