@@ -79,7 +79,9 @@ setWatch(btn2, BTN2, true);
 setWatch(btn3, BTN3, true);
 setWatch(btn1, BTN1, true);
 
+/*
 exports = {
   NC : NC,
   alertOn : alertOn,
 };
+*/
