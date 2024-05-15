@@ -1,4 +1,10 @@
-//var main = require("https://raw.githubusercontent.com/miseler/PoolAutomation/master/main.js");
+//require("https://raw.githubusercontent.com/miseler/PoolAutomation/master/main.js");
+
+//Set output 1 to ON
+//http://192.168.1.230/r-ee1ac5d/share/set-netio-output1-to-1.json
+//http://192.168.1.230/netio.cgi?pass=&output1=4
+
+
 
 var NC = require("nodeconfeu2018");
 var LEDon = false;
@@ -39,6 +45,7 @@ setInterval(function() {
 
 function btn1() {
   if (digitalRead(BTN1) == 1) alertOn = !alertOn;
+  console.log("alert is: "+alertOn);
 }
 
 function btn3() {
