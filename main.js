@@ -1,3 +1,5 @@
+//var main = require("https://raw.githubusercontent.com/miseler/PoolAutomation/master/main.js");
+
 var NC = require("nodeconfeu2018");
 var LEDon = false;
 var alertOn = false;
@@ -10,6 +12,17 @@ const inspect = obj => {
     }
   }
 };
+
+// shim to run Pixl.js Multicolour code on the Bangle1.js emulator
+if(NC.ledTop == undefined) { NC.ledTop = function(a) { // 3 element array
+    console.log(a);
+};}
+if(NC.ledBottom == undefined) { NC.ledBottom = function(a) { // 3 element array
+    console.log(a);
+};}
+if(NC.backlight == undefined) { NC.backlight = function(a) { // 3 element array
+    console.log(a);
+};}
 
 setInterval(function() {
   if(!alertOn) {
