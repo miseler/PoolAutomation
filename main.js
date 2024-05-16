@@ -1,9 +1,30 @@
-//require("https://raw.githubusercontent.com/miseler/PoolAutomation/master/main.js");
+// require("https://raw.githubusercontent.com/miseler/PoolAutomation/master/main.js");
+// https://www.espruino.com/modules/nodeconfeu2018.js
+// https://nodeconfeubadge.org/
+// virtual LEDs: https://forum.espruino.com/conversations/341306/#15005751
+// virtual LEDs: https://forum.espruino.com/conversations/341372/
+// offline development: https://forum.espruino.com/conversations/395908/
+// https://www.espruino.com/Pixl.js+Multicolour
+// https://github.com/Espruino/EspruinoDocs/blob/master/boards/PixljsMulticolour/simple.js
+// https://www.youtube.com/watch?v=H8L8ft830hI
+// https://www.youtube.com/watch?v=txZr2GhuoaI
+// https://www.youtube.com/watch?v=2ODoIpnTDA4
+// https://www.espruino.com/WiFi
+// https://www.espruino.com/ESP8266_WifiUsage
+// https://www.espruino.com/ESP8266
+// https://www.espruino.com/Reference
 
 //Set output 1 to ON
 //http://192.168.1.230/r-ee1ac5d/share/set-netio-output1-to-1.json
 //http://192.168.1.230/netio.cgi?pass=&output1=4
 
+
+/*
+var c = [127,0,0];
+  NC.ledTop(c);
+  NC.ledBottom(c);
+  NC.backlight(c.concat(c,c,c));
+*/
 
 
 var NC = require("nodeconfeu2018");
