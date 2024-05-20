@@ -122,6 +122,26 @@ setWatch(btn2, BTN2, true);
 setWatch(btn3, BTN3, true);
 setWatch(btn1, BTN1, true);
 
+D9.set(); // power on
+Serial1.setup(115200,{rx:D0,tx:D1});
+
+var wifi = require("ESP8266WiFi").connect(Serial1, function(err) {
+  if (err) throw err;
+  console.log("Connecting to WiFi");
+  wifi.connect(WIFI_NAME, WIFI_PASS, function(err) {
+    if (err) throw err;
+    console.log("Connected");
+    // Now you can do something, like an HTTP request
+    require("http").get("http://www.pur3.co.uk/hello.txt", function(res) {
+      console.log("Response: ",res);
+      res.on('data', function(d) {
+        console.log("--->"+d);
+      });
+    });
+  });
+});
+
+
 /*
 exports = {
   NC : NC,
