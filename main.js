@@ -9,9 +9,7 @@
 // https://www.youtube.com/watch?v=H8L8ft830hI
 // https://www.youtube.com/watch?v=txZr2GhuoaI
 // https://www.youtube.com/watch?v=2ODoIpnTDA4
-// https://www.espruino.com/WiFi
-// https://www.espruino.com/ESP8266_WifiUsage
-// https://www.espruino.com/ESP8266
+// https://www.espruino.com/IoT+Services
 // https://www.espruino.com/Reference
 
 //Set output 1 to ON
@@ -132,7 +130,7 @@ var wifi = require("ESP8266WiFi").connect(Serial1, function(err) {
     if (err) throw err;
     console.log("Connected");
     // Now you can do something, like an HTTP request
-    require("http").get("http://www.pur3.co.uk/hello.txt", function(res) {
+    require("http").get("https://www.pur3.co.uk/hello.txt", function(res) {
       console.log("Response: ",res);
       res.on('data', function(d) {
         console.log("--->"+d);
