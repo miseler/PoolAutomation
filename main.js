@@ -15,7 +15,8 @@
 //Set output 1 to ON
 //http://192.168.1.230/r-ee1ac5d/share/set-netio-output1-to-1.json
 //http://192.168.1.230/netio.cgi?pass=&output1=4
-
+//http://192.168.1.230/netio.json
+//FIFO_FULL
 
 /*
 var c = [127,0,0];
@@ -130,7 +131,7 @@ var wifi = require("ESP8266WiFi").connect(Serial1, function(err) {
     if (err) throw err;
     console.log("Connected");
     // Now you can do something, like an HTTP request
-    require("http").get("https://www.pur3.co.uk/hello.txt", function(res) {
+    require("http").get("http://www.pur3.co.uk/hello.txt", function(res) {
       console.log("Response: ",res);
       res.on('data', function(d) {
         console.log("--->"+d);
