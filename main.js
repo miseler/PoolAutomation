@@ -19,6 +19,13 @@
 //FIFO_FULL
 
 /*
+require("Storage").write(".boot0", `
+WIFI_NAME = "MyWiFi";
+WIFI_PASS = "HelloWorld123";
+`);
+*/
+
+/*
 var c = [127,0,0];
   NC.ledTop(c);
   NC.ledBottom(c);
